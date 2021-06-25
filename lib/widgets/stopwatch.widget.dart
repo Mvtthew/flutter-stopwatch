@@ -50,7 +50,7 @@ class _StopwatchWidgetState extends State<StopwatchWidget> with SingleTickerProv
     int minutes = (seconds / 60).floor();
 
     String minutesString = new NumberFormat("00").format(minutes);
-    String secondsString = new NumberFormat("00.00").format(seconds);
+    String secondsString = new NumberFormat("00.00").format(seconds % 60);
 
     return "$minutesString:$secondsString";
   }
